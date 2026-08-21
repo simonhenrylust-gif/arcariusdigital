@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, follow">
+<title>Kedai Serba Ada — Kedai Runcit Taman Semarak</title>
+<meta name="description" content="Kedai Serba Ada — kedai runcit tempatan di Taman Semarak. Barang dapur, minuman, snek, prepaid top-up dan penghantaran berdekatan. Pesan terus melalui WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Rubik:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --primary:#059669;
+    --secondary:#10B981;
+    --accent:#D97706;
+    --bg:#ECFDF5;
+    --fg:#0F172A;
+    --card:#FFFFFF;
+    --card-fg:#0F172A;
+    --muted:#F0F8F6;
+    --muted-fg:#475569;
+    --border:#DCEFE7;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Nunito Sans',sans-serif;
+    background:var(--bg);
+    color:var(--fg);
+    line-height:1.55;
+  }
+  h1,h2,h3,.brand{font-family:'Rubik',sans-serif;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+
+  /* Top signage bar */
+  .topbar{
+    background:var(--accent);
+    color:#fff;
+    font-weight:700;
+    font-size:0.85rem;
+    text-align:center;
+    padding:8px 12px;
+    letter-spacing:0.02em;
+  }
+
+  header{
+    background:var(--primary);
+    color:#fff;
+    position:sticky;
+    top:0;
+    z-index:20;
+  }
+  .nav{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:16px 0;
+  }
+  .brand{
+    font-size:1.4rem;
+    font-weight:900;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .brand .dot{
+    width:12px;height:12px;border-radius:3px;background:var(--accent);
+    display:inline-block;
+  }
+  .nav-links{display:flex;gap:24px;font-weight:600;font-size:0.95rem;}
+  .nav-links a{padding:6px 2px;border-bottom:2px solid transparent;}
+  .nav-links a:hover,.nav-links a:focus-visible{border-bottom-color:var(--accent);outline:none;}
+  .cta-btn{
+    background:var(--accent);
+    color:#fff;
+    font-weight:700;
+    padding:10px 20px;
+    border-radius:6px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:background 180ms ease, transform 180ms ease;
+  }
+  .cta-btn:hover,.cta-btn:focus-visible{background:#B45309;transform:translateY(-1px);outline:none;}
+  .cta-btn svg{width:18px;height:18px;fill:#fff;}
+
+  /* Hero */
+  .hero{
+    background:var(--secondary);
+    color:#fff;
+    padding:64px 0 0;
+    overflow:hidden;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.1fr 1fr;
+    gap:40px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:2.6rem;
+    font-weight:900;
+    line-height:1.1;
+    margin-bottom:16px;
+  }
+  .hero p{
+    font-size:1.1rem;
+    max-width:46ch;
+    margin-bottom:28px;
+    color:#EFFFFA;
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-actions .cta-btn{background:var(--accent);}
+  .btn-outline{
+    border:2px solid #fff;
+    padding:9px 20px;
+    border-radius:6px;
+    font-weight:700;
+    transition:background 180ms ease;
+  }
+  .btn-outline:hover,.btn-outline:focus-visible{background:rgba(255,255,255,0.15);outline:none;}
+  .hero-photo{
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:none;
+    border:6px solid #fff;
+    transform:translateY(10px);
+  }
+  .hero-photo img{width:100%;height:340px;object-fit:cover;}
+  .hero-badge{
+    display:inline-block;
+    background:var(--accent);
+    color:#fff;
+    font-weight:700;
+    font-size:0.8rem;
+    padding:5px 12px;
+    border-radius:100px;
+    margin-bottom:16px;
+  }
+
+  /* Info strip */
+  .info-strip{
+    background:var(--muted);
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    padding:18px 0;
+  }
+  .info-strip .wrap{
+    display:flex;
+    gap:32px;
+    flex-wrap:wrap;
+    justify-content:center;
+    font-weight:700;
+    font-size:0.95rem;
+    color:var(--primary);
+  }
+  .info-strip span{display:flex;align-items:center;gap:8px;}
+  .info-strip svg{width:18px;height:18px;fill:var(--primary);}
+
+  /* Services */
+  .section{padding:72px 0;}
+  .section-head{text-align:center;max-width:640px;margin:0 auto 44px;}
+  .section-head h2{font-size:2rem;font-weight:800;color:var(--fg);margin-bottom:10px;}
+  .section-head p{color:var(--muted-fg);}
+
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+  }
+  .card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:10px;
+    padding:26px 22px;
+  }
+  .card-icon{
+    width:44px;height:44px;
+    border-radius:8px;
+    background:var(--primary);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:16px;
+  }
+  .card:nth-child(2n) .card-icon{background:var(--accent);}
+  .card:nth-child(3n) .card-icon{background:var(--secondary);}
+  .card-icon svg{width:22px;height:22px;fill:#fff;}
+  .card h3{font-size:1.1rem;font-weight:700;margin-bottom:8px;color:var(--card-fg);}
+  .card p{color:var(--muted-fg);font-size:0.95rem;}
+
+  /* CTA band */
+  .cta-band{
+    background:var(--primary);
+    color:#fff;
+    text-align:center;
+    padding:56px 0;
+  }
+  .cta-band h2{font-size:1.8rem;font-weight:800;margin-bottom:12px;}
+  .cta-band p{color:#DFFDF0;margin-bottom:26px;}
+  .cta-band .cta-btn{
+    background:var(--accent);
+    font-size:1.05rem;
+    padding:14px 28px;
+  }
+
+  footer{
+    background:#0B4A34;
+    color:#D6F3E7;
+    padding:40px 0 24px;
+  }
+  .footer-grid{
+    display:grid;
+    grid-template-columns:1.3fr 1fr 1fr;
+    gap:32px;
+    margin-bottom:28px;
+  }
+  footer h4{color:#fff;font-family:'Rubik',sans-serif;font-size:1rem;margin-bottom:12px;}
+  footer p, footer a{font-size:0.92rem;color:#B9E5D3;}
+  footer a:hover,footer a:focus-visible{color:#fff;outline:none;}
+  .footer-bottom{
+    border-top:1px solid rgba(255,255,255,0.12);
+    padding-top:18px;
+    font-size:0.8rem;
+    color:#9BCFB8;
+    text-align:center;
+  }
+  .footer-bottom a{color:#9BCFB8;font-weight:600;}
+  .footer-bottom a:hover{color:#fff;}
+
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr;}
+    .hero-photo{order:-1;transform:none;}
+    .grid{grid-template-columns:1fr 1fr;}
+    .footer-grid{grid-template-columns:1fr;}
+    .nav-links{display:none;}
+  }
+  @media (max-width:520px){
+    .grid{grid-template-columns:1fr;}
+    .hero h1{font-size:2rem;}
+    .info-strip .wrap{gap:16px;justify-content:flex-start;overflow-x:auto;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{transition:none !important;scroll-behavior:auto !important;}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">Buka Setiap Hari 8:00 Pagi – 10:00 Malam · Taman Semarak, Selangor</div>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand"><span class="dot"></span>Kedai Serba Ada</a>
+    <nav class="nav-links" aria-label="Navigasi utama">
+      <a href="#produk">Produk</a>
+      <a href="#tentang">Tentang Kami</a>
+      <a href="#lokasi">Lokasi</a>
+    </nav>
+    <a class="cta-btn" href="https://wa.me/60111000001?text=Hi%20Kedai%20Serba%20Ada%2C%20saya%20nak%20order" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.6 6.3A8.9 8.9 0 0 0 12 4c-4.9 0-8.9 4-8.9 8.9 0 1.6.4 3.1 1.2 4.4L3 21l3.8-1.2c1.3.7 2.7 1.1 4.2 1.1 4.9 0 8.9-4 8.9-8.9 0-2.4-.9-4.6-2.3-6.3zM12 19c-1.3 0-2.6-.4-3.7-1l-.3-.2-2.4.7.7-2.3-.2-.3A7.1 7.1 0 0 1 4.9 12.9c0-3.9 3.2-7 7-7s7 3.1 7 7-3.1 7-7 7z"/></svg>
+      WhatsApp Kami
+    </a>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="hero-badge">Kedai Runcit Tempatan</span>
+      <h1>Serba Ada, Semua Ada — Barang Harian Terus Ke WhatsApp</h1>
+      <p>Barang dapur, minuman, snek, produk rumah dan top-up prepaid — pesan senang lewat WhatsApp, kami sediakan untuk anda ambil atau hantar berdekatan.</p>
+      <div class="hero-actions">
+        <a class="cta-btn" href="https://wa.me/60111000001?text=Hi%20Kedai%20Serba%20Ada%2C%20saya%20nak%20order" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24"><path d="M17.6 6.3A8.9 8.9 0 0 0 12 4c-4.9 0-8.9 4-8.9 8.9 0 1.6.4 3.1 1.2 4.4L3 21l3.8-1.2c1.3.7 2.7 1.1 4.2 1.1 4.9 0 8.9-4 8.9-8.9 0-2.4-.9-4.6-2.3-6.3zM12 19c-1.3 0-2.6-.4-3.7-1l-.3-.2-2.4.7.7-2.3-.2-.3A7.1 7.1 0 0 1 4.9 12.9c0-3.9 3.2-7 7-7s7 3.1 7 7-3.1 7-7 7z"/></svg>
+          Order via WhatsApp
+        </a>
+        <a class="btn-outline" href="#produk">Lihat Produk</a>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="https://images.unsplash.com/photo-1578916171728-46686eac8d58?w=900&q=75" alt="Rak kedai runcit penuh dengan barangan harian">
+    </div>
+  </div>
+</section>
+
+<div class="info-strip">
+  <div class="wrap">
+    <span><svg viewBox="0 0 24 24"><path d="M12 2 2 7v2h20V7l-10-5zM4 11v8H2v2h20v-2h-2v-8h-2v8h-3v-8h-2v8h-3v-8H8v8H6v-8H4z"/></svg>Taman Semarak, Selangor</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm1 10.6 4 2.4-.6 1-4.9-3V7h1.5v5.6z"/></svg>8 Pagi – 10 Malam, Setiap Hari</span>
+    <span><svg viewBox="0 0 24 24"><path d="M12 2 4 6v6c0 5 3.4 9.4 8 10 4.6-.6 8-5 8-10V6l-8-4z"/></svg>Penghantaran Berdekatan</span>
+  </div>
+</div>
+
+<section class="section" id="produk">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Apa Yang Kami Ada</h2>
+      <p>Semua keperluan harian dalam satu kedai — order melalui WhatsApp, kami siapkan untuk anda.</p>
+    </div>
+    <div class="grid">
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v2H4V4zm1 4h14l-1.5 12h-11L5 8zm4 2v8h1v-8H9zm5 0v8h1v-8h-1z"/></svg></div>
+        <h3>Barang Dapur</h3>
+        <p>Beras, minyak masak, gula, tepung, rempah dan barangan basah harian.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M7 2v6l-3 4v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8l-3-4V2h-1v6H8V2H7z"/></svg></div>
+        <h3>Minuman &amp; Snek</h3>
+        <p>Minuman sejuk, air mineral, biskut, keropok dan snek kegemaran keluarga.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M5 3h14v2H5V3zm0 4h14l-1 14H6L5 7zm5 3v8h1v-8h-1zm4 0v8h1v-8h-1z"/></svg></div>
+        <h3>Barang Rumah</h3>
+        <p>Sabun, detergen, tisu, produk kebersihan dan keperluan rumah harian.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M17 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM12 20a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM7 5h10v11H7V5z"/></svg></div>
+        <h3>Prepaid &amp; Bil Topup</h3>
+        <p>Top-up prepaid semua telco dan bayaran bil elektrik/air secara pantas.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M20 8h-3V4H3a2 2 0 0 0-2 2v11h2a3 3 0 0 0 6 0h6a3 3 0 0 0 6 0h2v-5l-3-4zM6 19a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm13 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm0-8.5 1.9 2.5H17v-2.5h2z"/></svg></div>
+        <h3>Penghantaran Berdekatan</h3>
+        <p>Hantar terus ke rumah dalam kawasan Taman Semarak dan sekitarnya.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M17.6 6.3A8.9 8.9 0 0 0 12 4c-4.9 0-8.9 4-8.9 8.9 0 1.6.4 3.1 1.2 4.4L3 21l3.8-1.2c1.3.7 2.7 1.1 4.2 1.1 4.9 0 8.9-4 8.9-8.9 0-2.4-.9-4.6-2.3-6.3z"/></svg></div>
+        <h3>Order Terus WhatsApp</h3>
+        <p>Hantar senarai barang, kami sahkan harga dan sediakan untuk anda ambil.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band" id="tentang">
+  <div class="wrap">
+    <h2>Kedai Runcit Yang Kenal Anda</h2>
+    <p>Dijalankan oleh keluarga tempatan sejak bertahun — order senang, tak perlu telefon lama-lama.</p>
+    <a class="cta-btn" href="https://wa.me/60111000001?text=Hi%20Kedai%20Serba%20Ada%2C%20saya%20nak%20order" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M17.6 6.3A8.9 8.9 0 0 0 12 4c-4.9 0-8.9 4-8.9 8.9 0 1.6.4 3.1 1.2 4.4L3 21l3.8-1.2c1.3.7 2.7 1.1 4.2 1.1 4.9 0 8.9-4 8.9-8.9 0-2.4-.9-4.6-2.3-6.3zM12 19c-1.3 0-2.6-.4-3.7-1l-.3-.2-2.4.7.7-2.3-.2-.3A7.1 7.1 0 0 1 4.9 12.9c0-3.9 3.2-7 7-7s7 3.1 7 7-3.1 7-7 7z"/></svg>
+      Hubungi Kami di WhatsApp
+    </a>
+  </div>
+</section>
+
+<footer id="lokasi">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h4>Kedai Serba Ada</h4>
+        <p>Kedai runcit tempatan menyediakan barangan harian untuk penduduk Taman Semarak dan sekitarnya, sejak 2010.</p>
+      </div>
+      <div>
+        <h4>Waktu Operasi</h4>
+        <p>Setiap hari<br>8:00 Pagi – 10:00 Malam</p>
+      </div>
+      <div>
+        <h4>Hubungi</h4>
+        <p><a href="https://wa.me/60111000001" target="_blank" rel="noopener">WhatsApp: +60 11-1000 001</a><br>
+        No. 12, Jalan Semarak 3, Taman Semarak</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      Demo build by Arcarius Digital — <a href="mailto:arcariusdigital@gmail.com">arcariusdigital@gmail.com</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
