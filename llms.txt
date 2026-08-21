@@ -1,0 +1,24 @@
+# Arcarius Digital
+
+> Fixed-price websites for Malaysian businesses - kedai runcit, bengkel, salon, tuition centres, F&B/food businesses, and grocery stores. WhatsApp-first, no monthly fees. Based in Malaysia.
+
+## Pricing
+
+- Starter (RM899, one-time): mobile-first website plus a free Google Business Profile fix.
+- Complete (RM1499, one-time, most popular): everything in Starter plus one manual process fixed - a booking page or an order page.
+- Complete Plus (RM2989, one-time): everything in Complete plus both a booking page and an order page, plus a priority build slot.
+- Makeover (RM128/hour): redesign of a website the business already has, quoted in estimated hours after a look at the site.
+
+## Key facts
+
+- Typical build timeline: 2-5 business days, depending on the request.
+- Payment: 50% deposit before work begins, 50% due on delivery. No monthly fees or subscriptions on any option.
+- MSME Digital Grant (Geran Digital PMKS Madani) can offset up to 50% of the package fee, up to RM5000, for SSM-registered Malaysian businesses meeting eligibility criteria.
+- Contact: WhatsApp +60 16-426 1472, email arcariusdigital@gmail.com
+
+## Pages
+
+- [Homepage](https://arcariusdigital.my/index.html): full offer, pricing, comparison, FAQ, demo builds.
+- [Homepage - Bahasa Malaysia](https://arcariusdigital.my/index-ms.html): Malay-language version of the homepage.
+- [Privacy Policy](https://arcariusdigital.my/privacy-policy.html): data handling under Malaysia's PDPA 2010.
+- [Terms of Service](https://arcariusdigital.my/terms-of-service.html): full pricing terms, payment terms, and MSME grant terms.
