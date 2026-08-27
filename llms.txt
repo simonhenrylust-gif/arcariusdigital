@@ -1,6 +1,6 @@
 # Arcarius Digital
 
-> Fixed-price websites for Malaysian businesses - kedai runcit, bengkel, salon, tuition centres, F&B/food businesses, and grocery stores. WhatsApp-first, no monthly fees. Based in Malaysia.
+> Fixed-price websites for Malaysian businesses - kedai runcit, bengkel, salon, tuition centres, F&B/food businesses, grocery stores, and retail stores. WhatsApp-first, no monthly fees. Based in Malaysia.
 
 ## Pricing
 
@@ -13,7 +13,7 @@
 
 - Typical build timeline: 2-5 business days, depending on the request.
 - Payment: 50% deposit before work begins, 50% due on delivery. No monthly fees or subscriptions on any option.
-- MSME Digital Grant (Geran Digital PMKS Madani) can offset up to 50% of the package fee, up to RM5000, for SSM-registered Malaysian businesses meeting eligibility criteria.
+- MSME Digital Grant (Geran Digital PMKS Madani): closed to new applications since 14 November 2025, no reopening date confirmed by the Ministry of Finance. A plain business website is not currently a listed eligible category even when the grant is open. Confirmed directly with BSN, August 2026.
 - Contact: WhatsApp +60 16-426 1472, email arcariusdigital@gmail.com
 
 ## Pages
