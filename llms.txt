@@ -18,7 +18,9 @@
 
 ## Pages
 
-- [Homepage](https://arcariusdigital.my/index.html): full offer, pricing, comparison, FAQ, demo builds.
-- [Homepage - Bahasa Malaysia](https://arcariusdigital.my/index-ms.html): Malay-language version of the homepage.
-- [Privacy Policy](https://arcariusdigital.my/privacy-policy.html): data handling under Malaysia's PDPA 2010.
-- [Terms of Service](https://arcariusdigital.my/terms-of-service.html): full pricing terms, payment terms, and MSME grant terms.
+- [Homepage](https://arcariusdigital.my/index.html): full offer, pricing, comparison, FAQ, demo builds. Bahasa Malaysia, primary version.
+- [Homepage - English](https://arcariusdigital.my/index-en.html): English-language version of the homepage.
+- [Privacy Policy](https://arcariusdigital.my/privacy-policy.html): data handling under Malaysia's PDPA 2010. Bahasa Malaysia, primary version.
+- [Privacy Policy - English](https://arcariusdigital.my/privacy-policy-en.html): English-language version.
+- [Terms of Service](https://arcariusdigital.my/terms-of-service.html): full pricing terms, payment terms, and MSME grant terms. Bahasa Malaysia, primary version.
+- [Terms of Service - English](https://arcariusdigital.my/terms-of-service-en.html): English-language version.
