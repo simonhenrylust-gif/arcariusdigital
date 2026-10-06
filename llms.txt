@@ -1,26 +1,27 @@
 # Arcarius Digital
 
-> Fixed-price websites for Malaysian businesses - kedai runcit, bengkel, salon, tuition centres, F&B/food businesses, grocery stores, and retail stores. WhatsApp-first, no monthly fees. Based in Malaysia.
+> Fixed-price websites for Brunei businesses - mini mart, garage, salon, tuition centres, F&B/food businesses, grocery stores, and retail stores. WhatsApp-first, no monthly fees.
 
 ## Pricing
 
-- Starter (RM899, one-time): mobile-first website plus a free Google Business Profile fix.
-- Complete (RM1499, one-time, most popular): everything in Starter plus one manual process fixed - a booking page or an order page.
-- Complete Plus (RM2989, one-time): everything in Complete plus both a booking page and an order page, plus a priority build slot.
-- Makeover (RM128/hour): redesign of a website the business already has, quoted in estimated hours after a look at the site.
+- Starter (B$388, one-time): mobile-first website plus a free Google Business Profile fix.
+- Complete (B$688, one-time, most popular): everything in Starter plus one manual process fixed - a booking page or an order page.
+- Complete Plus (B$1,288, one-time): everything in Complete plus both a booking page and an order page, plus a priority build slot.
+- Makeover (B$48/hour): redesign of a website the business already has, quoted in estimated hours after a look at the site.
 
 ## Key facts
 
 - Typical build timeline: 2-5 business days, depending on the request.
 - Payment: 50% deposit before work begins, 50% due on delivery. No monthly fees or subscriptions on any option.
-- MSME Digital Grant (Geran Digital PMKS Madani): closed to new applications since 14 November 2025, no reopening date confirmed by the Ministry of Finance. A plain business website is not currently a listed eligible category even when the grant is open. Confirmed directly with BSN, August 2026.
+- Government support: Brunei has support programmes for local businesses (for example through Darussalam Enterprise). Eligibility changes and a website build is not guaranteed to qualify.
+- Languages: the site is available in English and Bahasa Melayu.
 - Contact: WhatsApp +60 16-426 1472, email arcariusdigital@gmail.com
 
 ## Pages
 
-- [Homepage](https://arcariusdigital.my/index.html): full offer, pricing, comparison, FAQ, demo builds. Bahasa Malaysia, primary version.
+- [Homepage (Bahasa Melayu)](https://arcariusdigital.my/index.html): full offer, pricing, comparison, FAQ, demo builds.
 - [Homepage - English](https://arcariusdigital.my/index-en.html): English-language version of the homepage.
-- [Privacy Policy](https://arcariusdigital.my/privacy-policy.html): data handling under Malaysia's PDPA 2010. Bahasa Malaysia, primary version.
+- [Privacy Policy](https://arcariusdigital.my/privacy-policy.html): data handling under Brunei's Personal Data Protection Order 2025 (PDPO).
 - [Privacy Policy - English](https://arcariusdigital.my/privacy-policy-en.html): English-language version.
-- [Terms of Service](https://arcariusdigital.my/terms-of-service.html): full pricing terms, payment terms, and MSME grant terms. Bahasa Malaysia, primary version.
+- [Terms of Service](https://arcariusdigital.my/terms-of-service.html): full pricing terms, payment terms, ownership and liability.
 - [Terms of Service - English](https://arcariusdigital.my/terms-of-service-en.html): English-language version.
