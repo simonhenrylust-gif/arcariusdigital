@@ -137,10 +137,10 @@
     </label>
 
     <nav class="main-nav" aria-label="Utama">
-      <a href="#offer">Mengapa Kami</a>
-      <a href="#how-it-works">Cara Ia Berfungsi</a>
-      <a href="#verticals">Untuk Siapa</a>
       <a href="#pricing">Harga</a>
+      <a href="#offer">Mengapa Kami</a>
+      <a href="#verticals">Untuk Siapa</a>
+      <a href="#how-it-works">Cara Ia Berfungsi</a>
       <a href="#grant">Sokongan</a>
       <a href="#demos">Demo</a>
       <a href="#faq">Soalan Lazim</a>
@@ -340,7 +340,7 @@
               <div class="browser-url">yourbusiness-freesite.com</div>
             </div>
             <div class="browser-body browser-body-bad" style="padding:0;">
-              <video class="mock-scroll-video" src="assets/video/scroll-outdated.mp4" autoplay muted loop playsinline aria-label="Skrol contoh laman web yang ketinggalan zaman"></video>
+              <video class="mock-scroll-video" data-src="assets/video/scroll-outdated.mp4" preload="none" muted loop playsinline aria-label="Skrol contoh laman web yang ketinggalan zaman"></video>
               <span class="mock-badge-bad" style="margin:16px 22px 22px; display:block; width:fit-content;">JUALAN PEMBUKAAN BESAR-BESARAN!!!</span>
             </div>
           </div>
@@ -360,7 +360,7 @@
               <div class="browser-url">yourbusiness.com</div>
             </div>
             <div class="browser-body browser-body-good2">
-              <video class="mock-scroll-video" src="assets/video/scroll-good-bm.mp4" autoplay muted loop playsinline aria-label="Skrol langsung laman web demo Intan Gold House"></video>
+              <video class="mock-scroll-video" data-src="assets/video/scroll-good-bm.mp4" preload="none" muted loop playsinline aria-label="Skrol langsung laman web demo Intan Gold House"></video>
             </div>
           </div>
           <ul class="vs-points vs-points-good">
@@ -746,6 +746,14 @@ try {
 })();
 } catch (e) {}
 
+function loadLazyVideos(root) {
+  root.querySelectorAll('video[data-src]').forEach(function (v) {
+    v.autoplay = true;
+    v.src = v.dataset.src;
+    v.removeAttribute('data-src');
+  });
+}
+
 // Scroll-reveal: fade + rise each .reveal element into place once, the
 // first time it comes into view. Un-observes after firing — this is a
 // one-time entrance, not a repeated scroll effect.
@@ -755,12 +763,17 @@ try {
   if (!targets.length) return;
   if (!('IntersectionObserver' in window)) {
     targets.forEach(function (el) { el.classList.add('in'); });
+    loadLazyVideos(document);
     return;
   }
   var io = new IntersectionObserver(function (entries) {
     entries.forEach(function (entry) {
       if (entry.isIntersecting) {
         entry.target.classList.add('in');
+        // Below-the-fold demo videos load only once their reveal fires —
+        // avoids fetching every autoplay video on page load for a
+        // mobile-first site where that weight is a real data cost.
+        loadLazyVideos(entry.target);
         io.unobserve(entry.target);
       }
     });
@@ -771,6 +784,7 @@ try {
   // Fail visible, not invisible: if the reveal system itself breaks,
   // don't leave content stuck at opacity:0.
   document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  loadLazyVideos(document);
 }
 
 // Scroll-progress bar
