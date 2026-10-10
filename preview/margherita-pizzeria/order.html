@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Order for pickup | Margherita Pizzeria</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600;700&family=Playfair+Display+SC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="preview-bar">Sample preview made for Margherita Pizzeria. Orders on this page are not sent anywhere.</div>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="brand">Margherita Pizzeria<small>Brunei &middot; since 2016</small></a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html#branches">Branches</a>
+      <a href="https://www.instagram.com/margheritapizzeriabn/" target="_blank" rel="noopener">Menu</a>
+      <a href="index.html" class="btn btn-outline">Back</a>
+    </nav>
+  </div>
+</header>
+
+<main class="order-wrap">
+  <div class="container">
+
+    <form id="order-form" novalidate>
+      <div class="section-head">
+        <span class="eyebrow">Order for pickup</span>
+        <h1 style="font-size: clamp(1.9rem, 4.5vw, 2.8rem);">Pick your branch and time</h1>
+        <p>Your order goes to the branch you choose, with your pickup time attached.</p>
+      </div>
+
+      <div class="order-grid">
+        <div>
+          <fieldset class="panel">
+            <h2><span class="step-num">1</span>Branch</h2>
+            <p class="hint">Which kitchen should make it?</p>
+            <div class="choice-grid">
+              <label class="choice"><input type="radio" name="branch" value="Mata-Mata"><span>Mata-Mata<small>Scouts Complex, Jln Gadong</small></span></label>
+              <label class="choice"><input type="radio" name="branch" value="One Riverside"><span>One Riverside<small>Block B, Ground Floor</small></span></label>
+              <label class="choice"><input type="radio" name="branch" value="Jerudong"><span>Jerudong<small>Block A, Spg 49-8-6</small></span></label>
+              <label class="choice"><input type="radio" name="branch" value="Seria"><span>Seria<small>Belait</small></span></label>
+            </div>
+          </fieldset>
+
+          <fieldset class="panel">
+            <h2><span class="step-num">2</span>Pickup time</h2>
+            <p class="hint">Today. Slots that are already full are closed so every order can be ready on time.</p>
+            <div class="choice-grid slots" id="slots"></div>
+          </fieldset>
+
+          <fieldset class="panel">
+            <h2><span class="step-num">3</span>Your order</h2>
+            <p class="hint">Browse the <a href="https://www.instagram.com/margheritapizzeriabn/" target="_blank" rel="noopener" style="color: var(--color-primary); font-weight: 700; text-decoration: underline;">full menu on Instagram</a>.</p>
+            <div class="item-row">
+              <div>
+                <strong>Honey Garlic Chicken Pizza</strong>
+                <small>A reviewer favourite</small>
+              </div>
+              <div class="qty">
+                <button type="button" data-step="-1" aria-label="Remove one">&minus;</button>
+                <output id="qty" aria-live="polite">0</output>
+                <button type="button" data-step="1" aria-label="Add one">+</button>
+              </div>
+            </div>
+            <label class="field">
+              <span>Anything else from the menu</span>
+              <textarea id="extras" rows="3" placeholder="e.g. a second pizza, drinks, sides"></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset class="panel">
+            <h2><span class="step-num">4</span>Your details</h2>
+            <p class="hint">So the branch can reach you if anything changes.</p>
+            <label class="field"><span>Name</span><input type="text" id="name" autocomplete="name"></label>
+            <label class="field"><span>Phone / WhatsApp</span><input type="tel" id="phone" autocomplete="tel" inputmode="tel"></label>
+          </fieldset>
+        </div>
+
+        <aside class="panel summary" aria-label="Order summary">
+          <h2>Your pickup</h2>
+          <dl>
+            <dt>Branch</dt><dd id="s-branch">&mdash;</dd>
+            <dt>Time</dt><dd id="s-time">&mdash;</dd>
+            <dt>Honey Garlic Chicken</dt><dd id="s-qty">0</dd>
+          </dl>
+          <button type="submit" class="btn btn-primary">Place pickup order</button>
+          <p class="error" id="error" role="alert"></p>
+          <p class="note">Questions? WhatsApp <a href="https://wa.me/6738688884" target="_blank" rel="noopener" style="text-decoration: underline;">868 8884</a>.</p>
+        </aside>
+      </div>
+    </form>
+
+    <div class="confirm" id="confirm" aria-live="polite">
+      <div class="tick" aria-hidden="true">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <h2>Order received</h2>
+      <p>The branch has your order and your pickup time. Show this when you collect.</p>
+      <div class="ticket">
+        <dl>
+          <dt>Branch</dt><dd id="c-branch"></dd>
+          <dt>Pickup</dt><dd id="c-time"></dd>
+          <dt>Name</dt><dd id="c-name"></dd>
+          <dt>Order</dt><dd id="c-order"></dd>
+        </dl>
+      </div>
+      <a href="index.html" class="btn btn-outline">Back to home</a>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="brand">Margherita Pizzeria</div>
+    <p>Mata-Mata &middot; One Riverside &middot; Jerudong &middot; Seria &middot; WhatsApp +673 868 8884</p>
+  </div>
+</footer>
+
+<style>.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);} fieldset{border:1px solid var(--color-border);}</style>
+
+<script>
+  // Demo slots: next 8 quarter-hour slots starting ~30 min from now.
+  // Two are shown as "Full" to demonstrate per-slot capacity limits.
+  (function () {
+    var wrap = document.getElementById('slots');
+    var d = new Date();
+    d.setMinutes(d.getMinutes() + 30);
+    d.setMinutes(Math.ceil(d.getMinutes() / 15) * 15, 0, 0);
+    var full = [1, 4];
+    for (var i = 0; i < 8; i++) {
+      var t = new Date(d.getTime() + i * 15 * 60000);
+      var label = t.toLocaleTimeString('en-GB', { hour: 'numeric', minute: '2-digit', hour12: true }).replace(' ', '');
+      var isFull = full.indexOf(i) !== -1;
+      var el = document.createElement('label');
+      el.className = 'choice';
+      el.innerHTML = '<input type="radio" name="slot" value="' + label + '"' + (isFull ? ' disabled' : '') + '>' +
+        '<span>' + label + (isFull ? '<small>Full</small>' : '<small>Open</small>') + '</span>';
+      wrap.appendChild(el);
+    }
+  })();
+
+  var form = document.getElementById('order-form');
+  var qty = 0;
+  var $ = function (id) { return document.getElementById(id); };
+
+  function checked(name) {
+    var el = form.querySelector('input[name="' + name + '"]:checked');
+    return el ? el.value : '';
+  }
+  function refresh() {
+    $('s-branch').textContent = checked('branch') || '—';
+    $('s-time').textContent = checked('slot') || '—';
+    $('s-qty').textContent = qty;
+    $('qty').textContent = qty;
+  }
+
+  form.addEventListener('change', refresh);
+  form.querySelectorAll('.qty button').forEach(function (b) {
+    b.addEventListener('click', function () {
+      qty = Math.max(0, qty + Number(b.dataset.step));
+      refresh();
+    });
+  });
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var err = '';
+    var extras = $('extras').value.trim();
+    if (!checked('branch')) err = 'Choose a branch.';
+    else if (!checked('slot')) err = 'Choose a pickup time.';
+    else if (qty === 0 && !extras) err = 'Add something to your order.';
+    else if (!$('name').value.trim() || !$('phone').value.trim()) err = 'Add your name and phone number.';
+    $('error').textContent = err;
+    if (err) return;
+
+    var parts = [];
+    if (qty) parts.push(qty + ' x Honey Garlic Chicken Pizza');
+    if (extras) parts.push(extras);
+    $('c-branch').textContent = checked('branch');
+    $('c-time').textContent = 'Today, ' + checked('slot');
+    $('c-name').textContent = $('name').value.trim();
+    $('c-order').textContent = parts.join('; ');
+    form.style.display = 'none';
+    $('confirm').classList.add('show');
+    window.scrollTo(0, 0);
+  });
+</script>
+
+</body>
+</html>
